@@ -1,5 +1,6 @@
 body {
   background-color: #affaff;
+  font-family: "Economica", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #title {
@@ -27,6 +28,7 @@ body {
   border-radius: 5px;
   background-color: white;
   width: 70px;
+  height: 60px;
   padding: 10px;
   margin: 5px;
   text-align: center;
@@ -51,9 +53,79 @@ body {
   align-items: center;
 }
 
+.levelContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.treeElement {
+  height: 30px;
+  width: auto;
+  background-color: white;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin: 25px;
+}
+
 /* this makes the arrows within the number input fields disappear: */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* this is the code for a fad-in class */
+.fade-in {
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
