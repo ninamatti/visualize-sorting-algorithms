@@ -8,7 +8,7 @@ describe("Sort", () => {
   });
 
   it("should have a mergeSort method", () => {
-    expect(Sort.prototype.mergeSort).to.be.a("function");
+    expect(Sort.prototype.divideAndConquer).to.be.a("function");
   });
 
   it("should have a merge helper function", () => {
@@ -22,11 +22,11 @@ describe("Sort", () => {
   });
 
   it("should sort an array in ascending order", () => {
-    let test = new Sort([5, 8, 1, 3, 9, 2, 6, 4, 7]);
-    console.log("testSort:", test, "this array:", test.array);
-    let sortedArray = test.mergeSort(test.array);
+    let test = new Sort([5, 8, 3, 1, 2, 6, 4, 7]);
+    console.log("this array:", test.array);
+    let sortedArray = test.divideAndConquer(test.array);
 
     console.log("sorted: ", sortedArray);
-    expect(sortedArray).to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    expect(sortedArray).to.eql([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 });
