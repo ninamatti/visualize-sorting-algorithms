@@ -1,3 +1,59 @@
 body {
-  background-color: #55b491;
+  background-color: #affaff;
+}
+
+#title {
+  background-color: white;
+  text-align: center;
+  width: auto;
+  padding: 25px;
+  margin-bottom: 40px;
+}
+
+#inputArray {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: center;
+  justify-content: center;
+}
+
+#submitButton {
+  margin-top: 25px;
+  height: 30px;
+  width: auto;
+}
+
+.inputBox {
+  border-radius: 5px;
+  background-color: white;
+  width: 70px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.inputNumber {
+  margin-top: 5px;
+  width: 50px;
+  height: 20px;
+}
+
+.squareBrackets {
+  height: 50px;
+  width: auto;
+  padding-top: 20px;
+  margin: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* this makes the arrows within the number input fields disappear: */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
