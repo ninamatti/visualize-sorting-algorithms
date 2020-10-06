@@ -54,6 +54,8 @@ console.log(levelOneArrayOne);
 
 let inputArray = [];
 
+let buttonReset = document.getElementById("resetButton");
+
 let button = document.getElementById("submitButton");
 button.addEventListener("click", () => {
   inputArray = [
@@ -96,20 +98,23 @@ button.addEventListener("click", () => {
   levelThreeArrayEight.innerText = inputArray[7];
 
   // level 4
-  levelFourArrayOne.innerText = resultArray.slice(0, 2);
-  levelFourArrayTwo.innerText = resultArray.slice(2, 4);
-  levelFourArrayThree.innerText = resultArray.slice(4, 6);
-  levelFourArrayFour.innerText = resultArray.slice(6);
+  levelFourArrayOne.innerText = mergeFunction.levelFourArray1;
+  levelFourArrayTwo.innerText = mergeFunction.levelFourArray2;
+  levelFourArrayThree.innerText = mergeFunction.levelFourArray3;
+  levelFourArrayFour.innerText = mergeFunction.levelFourArray4;
 
   // level 5
-  levelFiveArrayOne.innerText = resultArray.slice(0, 4);
-  levelFiveArrayTwo.innerText = resultArray.slice(4);
+  levelFiveArrayOne.innerText = mergeFunction.levelFiveArray1;
+  levelFiveArrayTwo.innerText = mergeFunction.levelFiveArray2;
 
   // level 6
   levelSixArrayOne.innerText = resultArray;
 
   console.log("output: ", resultArray);
   console.log("children of level one: ", levelOne.children);
+
+  // make reset button appear
+  buttonReset.classList.remove("hidden");
 
   // make level 1 appear by removing hidden and adding fade-in class
   setTimeout(() => {
@@ -125,7 +130,7 @@ button.addEventListener("click", () => {
       child.classList.remove("hidden");
       child.classList.add("fade-in");
     }
-  }, 4000);
+  }, 6000);
 
   // make level 3 appear by removing hidden and adding fade-in class
   setTimeout(() => {
@@ -133,7 +138,7 @@ button.addEventListener("click", () => {
       child.classList.remove("hidden");
       child.classList.add("fade-in");
     }
-  }, 6000);
+  }, 10000);
 
   // make level 4 appear by removing hidden and adding fade-in class
   setTimeout(() => {
@@ -141,7 +146,7 @@ button.addEventListener("click", () => {
       child.classList.remove("hidden");
       child.classList.add("fade-in");
     }
-  }, 8000);
+  }, 14000);
 
   // make level 5 appear by removing hidden and adding fade-in class
   setTimeout(() => {
@@ -149,7 +154,7 @@ button.addEventListener("click", () => {
       child.classList.remove("hidden");
       child.classList.add("fade-in");
     }
-  }, 10000);
+  }, 18000);
 
   // make level 6 appear by removing hidden and adding fade-in class
   setTimeout(() => {
@@ -157,7 +162,44 @@ button.addEventListener("click", () => {
       child.classList.remove("hidden");
       child.classList.add("fade-in");
     }
-  }, 12000);
+  }, 22000);
+});
+
+buttonReset.addEventListener("click", () => {
+  // add hidden class to all display elements!
+
+  // level 1
+  for (let child of levelOne.children) {
+    child.classList.add("hidden");
+  }
+
+  // level 2
+  for (let child of levelTwo.children) {
+    child.classList.add("hidden");
+  }
+
+  // level 3
+  for (let child of levelThree.children) {
+    child.classList.add("hidden");
+  }
+
+  // level 4
+  for (let child of levelFour.children) {
+    child.classList.add("hidden");
+  }
+
+  // level 5
+  for (let child of levelFive.children) {
+    child.classList.add("hidden");
+  }
+
+  // level 6
+  for (let child of levelSix.children) {
+    child.classList.add("hidden");
+  }
+
+  // reset resetButton to hidden
+  buttonReset.classList.add("hidden");
 });
 
 /* Example Code
