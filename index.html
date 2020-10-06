@@ -3,16 +3,99 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/src/index.css" />
     <title>Code Chrysalis</title>
   </head>
 
   <body>
-    <div id="title"></div>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Engineering?" />
-      <input type="submit" />
-    </form>
+    <div id="title">
+      Enter an array of 8 numbers and watch it get mergeSorted!
+    </div>
+
+    <div id="inputArray">
+      <img
+        class="squareBrackets"
+        src="/img/squarebracketsLeft.png"
+        alt="Opening square bracket"
+      />
+      <div class="inputBox">
+        <label for="name">Value 1</label>
+        <input class="inputNumber" type="number" id="no1" value="1" />
+      </div>
+      <div class="inputBox">
+        <label for="name">Value 2</label>
+        <input class="inputNumber" type="number" id="no2" value="0" />
+      </div>
+      <div class="inputBox">
+        <label for="name">Value 3</label>
+        <input class="inputNumber" type="number" id="no3" value="0" />
+      </div>
+      <div class="inputBox">
+        <label for="name">Value 4</label>
+        <input class="inputNumber" type="number" id="no4" value="0" />
+      </div>
+      <div class="inputBox">
+        <label for="name">Value 5</label>
+        <input class="inputNumber" type="number" id="no5" value="0" />
+      </div>
+      <div class="inputBox">
+        <label for="name">Value 6</label>
+        <input class="inputNumber" type="number" id="no6" value="0" />
+      </div>
+      <div class="inputBox">
+        <label for="name">Value 7</label>
+        <input class="inputNumber" type="number" id="no7" value="0" />
+      </div>
+      <div class="inputBox">
+        <label for="name">Value 8</label>
+        <input class="inputNumber" type="number" id="no8" value="0" />
+      </div>
+      <img
+        class="squareBrackets"
+        src="/img/squarebracketsRight.png"
+        alt="Opening square bracket"
+      />
+    </div>
+    <div class="center">
+      <button id="submitButton">Get sortin'</button>
+    </div>
+
+    <div id="treeContainer">
+      <div class="levelContainer" id="level1">
+        <div class="treeElement long" id="level1array1"></div>
+        <div class="treeElement long" id="level1array2"></div>
+      </div>
+      <div class="levelContainer" id="level2">
+        <div class="treeElement mid" id="level2array1"></div>
+        <div class="treeElement mid" id="level2array2"></div>
+        <div class="treeElement mid" id="level2array3"></div>
+        <div class="treeElement mid" id="level2array4"></div>
+      </div>
+      <div class="levelContainer" id="level3">
+        <div class="treeElement short" id="level3array1"></div>
+        <div class="treeElement short" id="level3array2"></div>
+        <div class="treeElement short" id="level3array3"></div>
+        <div class="treeElement short" id="level3array4"></div>
+        <div class="treeElement short" id="level3array5"></div>
+        <div class="treeElement short" id="level3array6"></div>
+        <div class="treeElement short" id="level3array7"></div>
+        <div class="treeElement short" id="level3array8"></div>
+      </div>
+      <div class="levelContainer" id="level4">
+        <div class="treeElement mid" id="level4array1"></div>
+        <div class="treeElement mid" id="level4array2"></div>
+        <div class="treeElement mid" id="level4array3"></div>
+        <div class="treeElement mid" id="level4array4"></div>
+      </div>
+      <div class="levelContainer" id="level5">
+        <div class="treeElement long" id="level5array1"></div>
+        <div class="treeElement long" id="level5array2"></div>
+      </div>
+      <div class="levelContainer" id="level6">
+        <div class="treeElement ultra" id="level6array1"></div>
+      </div>
+    </div>
+    <div id="explanationSidebar"></div>
     <!--
     Where is this public/bundle.js file coming from?
     It comes from our trusty friend, webpack.
