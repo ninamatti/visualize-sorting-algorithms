@@ -8,7 +8,10 @@ body {
   text-align: center;
   width: auto;
   padding: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 #inputArray {
@@ -21,12 +24,26 @@ body {
 #submitButton {
   margin-top: 25px;
   height: 30px;
-  width: auto;
+  width: 90px;
+}
+
+#resetButton {
+  margin-top: 10px;
+  height: 30px;
+  width: 90px;
+}
+
+#level1 {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
 }
 
 .inputBox {
   border-radius: 5px;
-  background-color: white;
+  background-color: #affaff;
   width: 70px;
   height: 60px;
   padding: 10px;
@@ -63,11 +80,11 @@ body {
   width: auto;
   background-color: white;
   padding-bottom: 5px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 20px;
-  margin: 25px;
+  margin-bottom: 15px;
+  margin: 15px;
 }
 
 /* this makes the arrows within the number input fields disappear: */
@@ -79,11 +96,11 @@ input::-webkit-inner-spin-button {
 
 /* this is the code for a fad-in class */
 .fade-in {
-  animation: fadeIn ease 10s;
-  -webkit-animation: fadeIn ease 10s;
-  -moz-animation: fadeIn ease 10s;
-  -o-animation: fadeIn ease 10s;
-  -ms-animation: fadeIn ease 10s;
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
 }
 @keyframes fadeIn {
   0% {
