@@ -2,6 +2,13 @@ class SomeKindOfSort {
   constructor(origArray) {
     this.array = origArray;
     this.mid;
+    this.mergeCount = 0;
+    this.levelFourArray1;
+    this.levelFourArray2;
+    this.levelFourArray3;
+    this.levelFourArray4;
+    this.levelFiveArray1;
+    this.levelFiveArray2;
   }
 
   merge(sortedArray1, sortedArray2) {
@@ -45,6 +52,29 @@ class SomeKindOfSort {
       }
     }
     console.log("actual result:", result);
+
+    switch (this.mergeCount) {
+      case 0:
+        this.levelFourArray1 = result.slice(0);
+        break;
+      case 1:
+        this.levelFourArray2 = result.slice(0);
+        break;
+      case 2:
+        this.levelFiveArray1 = result.slice(0);
+        break;
+      case 3:
+        this.levelFourArray3 = result.slice(0);
+        break;
+      case 4:
+        this.levelFourArray4 = result.slice(0);
+        break;
+      case 5:
+        this.levelFiveArray2 = result.slice(0);
+        break;
+    }
+
+    this.mergeCount += 1;
     return result;
   }
 
@@ -68,6 +98,8 @@ class SomeKindOfSort {
     const highSolution = this.divideAndConquer(highArray);
 
     console.log("solution low: ", lowSolution, "solution high: ", highSolution);
+
+    console.log("level arrays: ", this.levelFiveArray1, this.levelFiveArray2);
     // merge the solution of recursion down both paths
     return this.merge(lowSolution, highSolution);
   }
